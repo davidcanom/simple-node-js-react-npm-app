@@ -12,6 +12,13 @@ jobs:
       - image: node:16-slim
     steps:
       - run: yarn install
+      - run: yarn build
+  test:
+    docker:
+      - image: node:16-slim
+    steps:
+      - run: yarn install
+      - run: yarn test
 
 workflows:
   dev:
@@ -20,3 +27,4 @@ workflows:
           filters:
             branches:
               only: circleci-project-setup
+      - test
