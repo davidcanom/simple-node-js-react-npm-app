@@ -9,7 +9,7 @@ version: 2.1
 jobs:
   build:
     docker:
-      - image: node:14-lts
+      - image: node:16-slim
     steps:
       - run: yarn install
 
