@@ -11,12 +11,14 @@ jobs:
     docker:
       - image: node:16-slim
     steps:
+      - run: ls -la
       - run: yarn install
       - run: yarn build
   test:
     docker:
       - image: node:16-slim
     steps:
+      - run: ls -la
       - run: yarn install
       - run: yarn test
 
